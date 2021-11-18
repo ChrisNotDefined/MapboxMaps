@@ -5,10 +5,11 @@
     <label class="form-label">
       Zoom:{{ zoomLevel | number: "2.0-2" }} - Lng, Lat:[]
     </label>
-    <input type="range" class="form-range" id="customRange1" />
+    <input min="0" max="22" type="range" step="0.1" class="form-range" id="customRange1" [value]="zoomLevel" (change)="zoomChage($event)"/>
   </div>
-  <div class="col-12">
+  <div class="d-flex">
     <button class="btn btn-primary" (click)="zoomOut()">-</button>
+    <button class="btn btn-primary mx-auto" (click)="zoomCenter()">MiddleZoom</button>
     <button class="btn btn-primary float-end" (click)="zoomIn()">+</button>
   </div>
 </div>

@@ -71,7 +71,7 @@ export class ZoomRangeComponent implements AfterViewInit {
     this.mapa.zoomOut();
   }
 
-  zoomChage(evt: Event) {
+  zoomChage(evt: any) {
     this.mapa.zoomTo(evt.target?.value);
   }
 
